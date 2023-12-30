@@ -2,21 +2,24 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(void) {
-    // Seed the random number generator with the current time
+/**
+ * main - prints if number is positive, zero or negative
+ * Return: Always (Success)
+ *
+ */
+
+int main(void)
+{
+	int n;
     srand(time(NULL));
-     int n = rand();
+      n = rand() - RAND_MAX / 2 ;
 
-    // Print the random number
-    printf("%d ", n);
-
-    // Check if the number is positive, negative, or zero
     if (n > 0) {
-        printf("is positive\n");
-    } else if (n < 0) {
-        printf("is negative\n");
+        printf("%d is positive\n", n);
+    } else if (n == 0) {
+        printf("%d is zero\n", n);
     } else {
-        printf("is zero\n");
+        printf("%d is negative\n", n);
     }
 
     return 0;
