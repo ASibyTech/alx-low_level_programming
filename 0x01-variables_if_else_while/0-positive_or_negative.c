@@ -16,7 +16,7 @@ int main(void) {
     srand(time(NULL));
 
     // Generate a random number
-    int n = rand();
+    int n = rand() - RAND_MAX / 2;
 
     // Print the random number with positive/negative sign
     if (n > 0) {
