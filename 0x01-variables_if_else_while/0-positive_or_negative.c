@@ -7,8 +7,6 @@
  *
  * Return: Always 0 (Success)
  */
-
-
 int main(void)
 {
     int n;
@@ -28,5 +26,6 @@ int main(void)
     {
         printf("0 is zero\n");
     }
-    return 0;
+
+    return (0);
 }
