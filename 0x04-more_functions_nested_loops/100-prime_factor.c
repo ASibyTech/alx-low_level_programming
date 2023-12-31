@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Entry point, prints the largest prime factor of 612852475143
+ * main - Entry point, prints the largest prime
+ * factor of 612852475143
  *
- * Return: 0 (Success)
+ * Return: 0 all the time
  */
 
 int main(void)
@@ -23,7 +24,7 @@ int main(void)
 				prime /= divisor;
 		}
 	}
-	printf("%d\n", prime);
+	printf("%ld\n", prime);
 
 	return (0);
 }
