@@ -1,27 +1,42 @@
 #include <stdio.h>
+#include <unistd.h>
+
+#define SUCCESS 0
+
+/**
+ * print_fibonacci - Prints the first 98 Fibonacci numbers
+ */
+void print_fibonacci(void)
+{
+    unsigned long a = 1, b = 2, next;
+
+    printf("%lu, %lu, ", a, b);
+
+    for (int i = 3; i <= 98; i++)
+    {
+        next = a + b;
+        printf("%lu", next);
+
+        if (i < 98)
+            printf(", ");
+        else
+            printf("\n");
+
+        a = b;
+        b = next;
+    }
+}
 
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Return: SUCCESS
  */
 int main(void)
 {
-    unsigned long int fib1 = 1, fib2 = 2, nextTerm;
+    write(1, "Return SUCCESS\n", 15);
+    print_fibonacci();
 
-    printf("%lu, %lu", fib1, fib2);
-
-    for (int i = 3; i <= 98; i++)
-    {
-        nextTerm = fib1 + fib2;
-        printf(", %lu", nextTerm);
-
-        fib1 = fib2;
-        fib2 = nextTerm;
-    }
-
-    printf("\n");
-
-    return (0);
+    return SUCCESS;
 }
 
