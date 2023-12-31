@@ -6,27 +6,27 @@
  */
 void print_triangle(int size)
 {
-    if (size <= 0)
-    {
-        _putchar('\n');
-        return;
-    }
-
-    int row, space, hash;
-
-    for (row = 0; row < size; row++)
-    {
-        for (space = 0; space < size - row - 1; space++)
-        {
-            _putchar(' ');
-        }
-
-        for (hash = 0; hash < row + 1; hash++)
-        {
-            _putchar('#');
-        }
-
-        _putchar('\n');
-    }
+     int hash, index;
+   
+     if (size > 0)
+     {
+	     for (hash = 1; hash <= size; hash++)
+	     {
+		     for (index = size - hash; index > 0; index--)
+		     {
+			     _putchar(' ');
+		     }
+		     for (index = 0; index < hash; index++)
+		     {
+			     _putchar('#');
+		     }
+		     if (hash == size)
+		     {
+			     continue;
+		     }
+		     _putchar('\n')
+	     }
+     }
+     _putchar('\n')
 }
 
