@@ -1,16 +1,4 @@
-#include <unistd.h>
-
-/**
- * _putchar - Writes a character to the standard output (stdout)
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-    return write(1, &c, 1);
-}
+#include <stdio.h>
 
 int _putchar(char c);
 
@@ -21,15 +9,25 @@ int _putchar(char c);
  */
 int main(void)
 {
-    _putchar('_');
-    _putchar('p');
-    _putchar('u');
-    _putchar('t');
-    _putchar('c');
-    _putchar('h');
-    _putchar('a');
-    _putchar('r');
-    _putchar('\n');
+    char str[] = "_putchar\n";
+    int i;
 
-    return (0);
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        _putchar(str[i]);
+    }
+
+    return 0;
 }
+
+/**
+ * _putchar - Writes a character to the standard output (stdout)
+ * @c: The character to print
+ *
+ * Return: On success 1, on error -1.
+ */
+int _putchar(char c)
+{
+    return write(1, &c, 1);
+}
+
