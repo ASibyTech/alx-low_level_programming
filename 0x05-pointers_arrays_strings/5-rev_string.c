@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * rev_string - Reverses a string
- * @s: The string to be reversed
- */
+  * rev_string - Reverses a string
+  * @s: The string to be reversed
+  */
+
 void rev_string(char *s)
 {
 	int i;
@@ -11,11 +12,12 @@ void rev_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 		count++;
+
 	for (i = 0; i < count / 2; i++)
 	{
 		char j;
 		j = s[i];
-		s[i] = s[count - 1 -i];
-		s[count -1 -i] = j;
+		        s[i] = s[count - 1 -i];
+		        s[count -1 -i] = j;
 	}
 }
