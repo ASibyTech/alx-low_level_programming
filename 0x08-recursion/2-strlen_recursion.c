@@ -3,7 +3,6 @@
 /**
  * _strlen_recursion - Returns the length of a string.
  * @s: The string to calculate the length.
- *
  * Return: The length of the string.
  */
 
