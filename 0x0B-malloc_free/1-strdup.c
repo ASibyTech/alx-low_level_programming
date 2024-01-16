@@ -11,29 +11,24 @@ char *_strdup(char *str)
 {
     char *dup_str;
     unsigned int length = 0, i;
+
     if (str == NULL)
     {
         return (NULL);
     }
-
-    /* Calculate the length of the string */
     while (str[length])
     {
         length++;
     }
-
     /* Allocate memory for the duplicated string */
     dup_str = malloc((length + 1) * sizeof(char));
     if (dup_str == NULL)
     {
         return (NULL);
     }
-
-    /* Copy the string to the newly allocated memory */
     for (i = 0; i <= length; i++)
     {
         dup_str[i] = str[i];
     }
-
     return (dup_str);
 }
