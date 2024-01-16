@@ -10,7 +10,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *cct_str;
+	char *concat_str;
 	unsigned int L_s1 = 0, L_s2 = 0, i, j;
 
 	/* Treat NULL as an empty string */
@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
                 L_s2++;
 
 	/* Allocate memory for the concatenated string */
-	cct_str = malloc((L_s1 + L_s2 + 1) * sizeof(char));
+	concat_str = malloc((L_s1 + L_s2 + 1) * sizeof(char));
 	if (cct_str == NULL)
 		return (NULL);
 	
@@ -37,8 +37,8 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0; j < L_s2; i++, j++)
                 cct_str[i] = s2[j];
 
-	cct_str[i] = '\0';
+	concat_str[i] = '\0';
 
-	return (cct_str);
+	return (concat_str);
 
 }
