@@ -5,7 +5,8 @@
  *@s1: the first string.
  *@s2: the second string.
  *
- *return: a pointer or NULL.
+ * Return: A pointer to the concatenated string.
+ *         NULL on failure.
  */
 
 char *str_concat(char *s1, char *s2)
