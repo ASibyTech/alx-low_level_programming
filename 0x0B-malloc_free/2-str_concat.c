@@ -29,13 +29,13 @@ char *str_concat(char *s1, char *s2)
 
 	/* Allocate memory for the concatenated string */
 	concat_str = malloc((L_s1 + L_s2 + 1) * sizeof(char));
-	if (cct_str == NULL)
+	if (concat_str == NULL)
 		return (NULL);
 	
 	for (i = 0; i < L_s1; i++)
-		cct_str[i] = s1[i];
+		concat_str[i] = s1[i];
 	for (j = 0; j < L_s2; i++, j++)
-                cct_str[i] = s2[j];
+                concat_str[i] = s2[j];
 
 	concat_str[i] = '\0';
 
