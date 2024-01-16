@@ -26,7 +26,6 @@ char *str_concat(char *s1, char *s2)
 	/* Calculate the length of s2 */
 	while (s2[L_s2])
                 L_s2++;
-
 	/* Allocate memory for the concatenated string */
 	concat_str = malloc((L_s1 + L_s2 + 1) * sizeof(char));
 	if (concat_str == NULL)
