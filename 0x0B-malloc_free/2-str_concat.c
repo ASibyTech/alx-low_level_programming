@@ -1,11 +1,11 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings.
+ *str_concat - concatenates two strings.
  *@s1: the first string.
  *@s2: the second string.
  *
- * return: a pointer or NULL.
+ *return: a pointer or NULL.
  */
 
 char *str_concat(char *s1, char *s2)
