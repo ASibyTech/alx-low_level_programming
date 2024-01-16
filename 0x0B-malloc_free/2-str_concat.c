@@ -7,22 +7,27 @@
  *
  * return: a pointer or NULL.
  */
+
 char *str_concat(char *s1, char *s2)
 {
 	char *cct_str;
 	unsigned int L_s1 = 0, L_s2 = 0, i, j;
 
+	/* Treat NULL as an empty string */
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
+	/* Calculate the length of s1 */
 	while (s1[L_s1])
 		L_s1++;
 
+	/* Calculate the length of s2 */
 	while (s2[L_s2])
                 L_s2++;
 
+	/* Allocate memory for the concatenated string */
 	cct_str = malloc((L_s1 + L_s2 + 1) * sizeof(char));
 	if (cct_str == NULL)
 		return (NULL);
