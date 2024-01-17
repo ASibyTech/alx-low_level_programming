@@ -9,10 +9,10 @@
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)  /* If n is negative, return -1 to indicate an error */
-		return -1;
+	if (n < 0)
+		return (-1);
 
-	return find_sqrt(n, 0);  /* Call a helper function to find the square root */
+	return (find_sqrt(n, 0));
 }
 
 /**
@@ -25,11 +25,11 @@ int _sqrt_recursion(int n)
  */
 int find_sqrt(int n, int guess)
 {
-	if (guess * guess == n)  /* Base case: if the square of the guess is equal to n */
-		return guess;
+	if (guess * guess == n)
+		return (guess);
 
-	if (guess * guess > n)  /* If the square of the guess is greater than n, n does not have a natural square root */
-		return -1;
+	if (guess * guess > n)
+		return (-1);
 
-	return find_sqrt(n, guess + 1);  /* Recursive call to find the square root with the next guess */
+	return (find_sqrt(n, guess + 1));
 }
