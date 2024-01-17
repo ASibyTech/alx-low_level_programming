@@ -15,13 +15,15 @@ int **alloc_grid(int width, int height)
 
     /* Check for invalid width or height */
     if (width <= 0 || height <= 0)
+    {
         return (NULL);
-
+    }
     /* Allocate memory for the rows */
     grid = malloc(height * sizeof(int *));
     if (grid == NULL)
+    {
         return (NULL);
-
+    }
     /* Allocate memory for the columns of each row */
     for (i = 0; i < height; i++)
     {
@@ -35,7 +37,6 @@ int **alloc_grid(int width, int height)
             return (NULL);
         }
     }
-
     /* Initialize each element to 0 */
     for (i = 0; i < height; i++)
     {
@@ -44,7 +45,6 @@ int **alloc_grid(int width, int height)
             grid[i][j] = 0;
         }
     }
-
     return (grid);
 }
 
