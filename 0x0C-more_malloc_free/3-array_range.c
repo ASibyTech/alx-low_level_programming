@@ -3,8 +3,8 @@
 
 /**
  * array_range - creates an array of integers from min to max
- * @min: minimum value
- * @maw: maximum value
+ * @min: minimum value (inclusive)
+ * @maw: maximum value (inclusive)
  *
  * Return: pointer to the newly creatd array or NULL on failure
  */
